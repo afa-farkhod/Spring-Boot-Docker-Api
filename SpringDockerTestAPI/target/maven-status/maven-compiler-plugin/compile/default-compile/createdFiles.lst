@@ -1,0 +1,4 @@
+com\af\spring\boot\docker\test\SpringDockerTestApiApplication.class
+com\af\spring\boot\docker\test\User.class
+com\af\spring\boot\docker\test\UserController.class
+com\af\spring\boot\docker\test\UserService.class
