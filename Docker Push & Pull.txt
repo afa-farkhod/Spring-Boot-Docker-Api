@@ -1,0 +1,32 @@
+1) tutorial: https://youtu.be/EIHY_CY5J0k
+2) first make the api as docker image:
+	$docker buld -t hello-frank .
+3)check for image created:
+	docker images:
+	hello-frank latest    239cf7ac7571   11 minutes ago   177MB
+4) create tag of the image:
+	$ docker tag hello-frank:latest DOCKER_ID/hello-frank
+   output:
+	DOCKER_ID/hello-frank latest    239cf7ac7571   11 minutes ago   177MB
+5) $ winpty docker run -it DOCKER_ID/hello-frank
+6) login to docker hub:
+	$docker login
+7) push the last updated image:
+	$ docker push DOCKER_ID/hello-frank
+8) pull the image from docker hup:
+	$ docker pull DOCKER_ID/hello-frank
+9) check the api on another machine, to simulate we can use
+   https://labs.play-with-docker.com
+10) from play-with-docker-com site we pull the image from docker hub,
+   and run it 
+
+Example of pulling nginx image from docker-hub and running in localhost port
+1)$docker pull nginx:1.23 
+2)$docker run -d -p 8080:80 nginx:1.23
+
+Command to delete all not active containers:
+1) $docker ps -a ---> check for not active containers;
+2) $docker rm $(docker ps -a -q) -----> delete all;
+
+Command to delete image:
+$docker rmi [image-name]
