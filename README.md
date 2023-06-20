@@ -17,4 +17,4 @@ Springboot java api which runs inside the docker container, and connection is ch
 
 ![image](https://user-images.githubusercontent.com/24220136/227764744-35908228-03d0-4be4-b0be-249bc75a055c.png)
 
-
+- [Spring Boot 3 + Spring Security 6 - JWT Authentication and Authorisation](https://youtu.be/KxqlJblhzfI) - following is the YouTube tutorial which teachs how to implement JWT authentication and authorization in a Spring Boot 3.0 application using Spring Security 6 and a Postgres database to store user credentials. 
