@@ -1,6 +1,16 @@
 # [Spring-Boot-Docker-Api](https://spring.io/guides/topicals/spring-boot-docker/)
 Springboot java api which runs inside the docker container, and connection is checked with postman api
 
+- A Basic Dockerfile
+  - A Spring Boot application is easy to convert into an executable JAR file. All the Getting Started Guides do this, and every application that you download from Spring Initializr has a build step to create an executable JAR. With `Maven`, you run `./mvnw install`, With `Gradle`, you run `./gradlew build`.
+  -  A basic Dockerfile to run that JAR would then look like this, at the top level of your project:
+    ```
+    FROM eclipse-temurin:17-jdk-alpine
+    VOLUME /tmp
+    ARG JAR_FILE
+    COPY ${JAR_FILE} app.jar
+    ENTRYPOINT ["java","-jar","/app.jar"]
+    ```
 - Springboot java api which shows the connection with the postman api through the port:8080(locally), port: 8000 (docker), i've already created the image of the java api:
 
 ![image](https://user-images.githubusercontent.com/24220136/227764481-756cb219-6bbd-49f6-9b4e-fad87ec73c1c.png)
